@@ -18,6 +18,7 @@ body {
   border-radius: 20px;
   padding: 40px 35px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .search {
@@ -25,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .search input {
@@ -36,8 +38,13 @@ body {
   height: 60px;
   border-radius: 30px;
   flex: 1;
-  margin-right: 16px; /* fixed typo (was 'margin: right 16px') */
+  margin-right: 16px;
   font-size: 18px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  box-shadow: 0 0 8px #a0f1ff;
 }
 
 .search button {
@@ -48,6 +55,14 @@ body {
   width: 60px;
   height: 60px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.search button:hover {
+  transform: scale(1.1);
 }
 
 .search button img {
@@ -58,11 +73,17 @@ body {
   width: 400px;
   height: 300px;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.Weather-icon:hover {
+  transform: scale(1.05);
 }
 
 .temp {
   font-size: 48px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .city {
@@ -72,9 +93,11 @@ body {
 
 .details {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
   gap: 20px;
+  margin-top: 50px;
+  padding: 0 20px;
 }
 
 .col {
@@ -82,16 +105,18 @@ body {
   align-items: center;
   gap: 10px;
   flex: 1;
+  text-align: left;
 }
 
 .col img {
   width: 40px;
+  margin-right: 10px;
 }
 
 .humidity,
 .wind {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 28px;
+  margin-top: -6px;
   color: #e0f7fa;
 }
 
@@ -100,26 +125,29 @@ body {
   font-size: 18px;
   color: #b2ebf2;
 }
-.details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-top: 50px;
-}
-.col {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 10px;
-  flex: 1;
-}
-.col img {
-  width: 40px;
-  margin-right: 10px;
-}
-.humidity,
-.wind {
-  font-size: 28px;
-  margin-top: -6px;
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .Weather-icon {
+    width: 300px;
+    height: 220px;
+  }
+
+  .temp {
+    font-size: 36px;
+  }
+
+  .city {
+    font-size: 24px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 22px;
+  }
+
+  .humidity span,
+  .wind span {
+    font-size: 16px;
+  }
 }
