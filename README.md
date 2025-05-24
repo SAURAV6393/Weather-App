@@ -27,7 +27,7 @@ Whether you're planning your day or just curious about the forecast worldwide, t
 ## 🎬 Live Preview
 
 👉 **Check out the live version here:**
-🔗 [Live Weather App](https://github.com/SAURAV6393/Weather-App)
+🔗 [Live Weather App](https://www.linkedin.com/feed/update/urn:li:ugcPost:7332093730994184192/)
 
 
 ## 📦 Installation & Setup
