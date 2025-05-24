@@ -45,6 +45,7 @@
 
       const searchBox = document.querySelector(".search input");
       const searchBtn = document.querySelector(".search button");
+      const Weathericon = document.querySelector(".Weather-icon");
 
       async function checkWeather(city) {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -57,6 +58,28 @@
         document.querySelector(".humidity").innerHTML =
           data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+        // Map OpenWeatherMap weather conditions to icon filenames
+        const weatherIcons = {
+          Thunderstorm: "thunderstorm.png",
+          Drizzle: "drizzle.png",
+          Rain: "rain.png",
+          Snow: "snow.png",
+          Mist: "mist.png",
+          Smoke: "smoke.png",
+          Haze: "haze.png",
+          Dust: "dust.png",
+          Fog: "fog.png",
+          Clear: "clear.png",
+          Clouds: "clouds.png",
+        };
+
+        const mainWeather = data.weather[0].main;
+        if (weatherIcons[mainWeather]) {
+          Weathericon.src = "images/" + weatherIcons[mainWeather];
+        } else {
+          Weathericon.src = "images/clouds.png";
+        }
       }
 
       searchBtn.addEventListener("click", () => {
