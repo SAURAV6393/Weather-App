@@ -3,103 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>SkyScope - Weather Insight</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card">
-      <div class="search">
-        <input type="text" placeholder="Enter city name" spellcheck="false" />
-        <button><img src="images/search.png" alt="Search" /></button>
-      </div>
-      <div class="Weather">
-        <img src="images/rain.png" class="Weather-icon" alt="Weather Icon" />
-        <h1 class="temp">22°C</h1>
-        <h2 class="city">New York</h2>
-        <div class="details">
-          <div class="col">
-            <img src="images/humidity.png" alt="Humidity Icon" />
-            <div>
-              <p class="humidity">
-                <span class="main-humidity">50%</span>
-                <span class="compare-humidity"> | 60%</span>
-              </p>
-              <p>Humidity (NY | London)</p>
+    <div class="app-container">
+      <div class="card">
+        <h1 class="app-title">SkyScope</h1>
+        <div class="search">
+          <input type="text" placeholder="Search city..." spellcheck="false" />
+          <button><img src="images/search.png" alt="Search" /></button>
+        </div>
+        <div class="weather-info hidden">
+          <img src="images/clear.png" class="weather-icon" alt="Weather Icon" />
+          <h1 class="temp">22°C</h1>
+          <h2 class="city">New York, US</h2>
+          <p class="description">Clear Sky</p>
+          <div class="details">
+            <div class="col">
+              <img src="images/humidity.png" alt="Humidity" />
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <img src="images/wind.png" alt="Wind Icon" />
-            <div>
-              <p class="wind">
-                <span class="main-wind">15 km/h</span>
-                <span class="compare-wind"> | 10 km/h</span>
-              </p>
-              <p>Wind Speed (NY | London)</p>
+            <div class="col">
+              <img src="images/wind.png" alt="Wind" />
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Wind Speed</p>
+              </div>
             </div>
           </div>
         </div>
+        <p class="error hidden">City not found. Please try again.</p>
       </div>
     </div>
-    <script>
-      const apiKey = "4556a3bcd82ded1835de5ef2ab95e0f2";
-      const apiUrl =
-        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-      const searchBox = document.querySelector(".search input");
-      const searchBtn = document.querySelector(".search button");
-      const Weathericon = document.querySelector(".Weather-icon");
-
-      const weatherIcons = {
-        Thunderstorm: "thunderstorm.png",
-        Drizzle: "drizzle.png",
-        Rain: "rain.png",
-        Snow: "snow.png",
-        Mist: "mist.png",
-        Smoke: "smoke.png",
-        Haze: "haze.png",
-        Dust: "dust.png",
-        Fog: "fog.png",
-        Sand: "sand.png",
-        Ash: "ash.png",
-        Squall: "squall.png",
-        Tornado: "tornado.png",
-        Clear: "clear.png",
-        Clouds: "clouds.png",
-      };
-
-      async function checkWeather(city) {
-        const response = await fetch(`${apiUrl}${city}&appid=${apiKey}`);
-        if (response.status === 404) {
-          alert("City not found");
-          return;
-        }
-        const data = await response.json();
-
-        document.querySelector(".city").textContent = data.name;
-        document.querySelector(".temp").textContent = data.main.temp + "°C";
-        document.querySelector(".main-humidity").textContent =
-          data.main.humidity + "%";
-        document.querySelector(".main-wind").textContent =
-          data.wind.speed + " km/h";
-
-        const mainWeather = data.weather[0].main;
-        if (weatherIcons[mainWeather]) {
-          Weathericon.src = "images/" + weatherIcons[mainWeather];
-        } else {
-          console.warn("Missing icon for:", mainWeather);
-          Weathericon.src = "images/clouds.png";
-        }
-      }
-
-      searchBtn.addEventListener("click", () => {
-        checkWeather(searchBox.value);
-      });
-
-      searchBox.addEventListener("keypress", function (e) {
-        if (e.key === "Enter") {
-          checkWeather(searchBox.value);
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
