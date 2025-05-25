@@ -1,9 +1,9 @@
-# 🌦️ SkyScope - Weather Insight
+# 🌦️ SkyScope - Weather Insight  
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=fff)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000)
-![OpenWeatherMap](https://img.shields.io/badge/API-OpenWeatherMap-orange?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=fff) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000) 
+![OpenWeatherMap](https://img.shields.io/badge/API-OpenWeatherMap-orange?style=for-the-badge)  
 
 **SkyScope** is a modern and responsive weather application that allows users to search for any city and view its real-time weather data. It fetches information like temperature, weather conditions, humidity, and wind speed using the OpenWeatherMap API.
 
@@ -11,22 +11,22 @@
 
 ## 🔍 Features
 
-- 🌍 Search weather by city name
-- 🌡️ Displays real-time temperature in Celsius
-- ☁️ Dynamic weather condition icon
-- 💧 Shows humidity and 🌬️ wind speed
-- 🧠 Smart error handling for invalid city names
-- 📱 Fully responsive design
-- ✨ Smooth animations and user-friendly UI
+- 🌍 Search weather by city name  
+- 🌡️ Displays real-time temperature in Celsius  
+- ☁️ Dynamic weather condition icon  
+- 💧 Shows humidity and 🌬️ wind speed  
+- 🧠 Smart error handling for invalid city names  
+- 📱 Fully responsive design  
+- ✨ Smooth animations and user-friendly UI  
 
 ---
 
 ## 🛠️ Built With
 
-- **HTML5** – for structure
-- **CSS3** – for styling and responsiveness
-- **JavaScript (Vanilla)** – for functionality and API integration
-- **OpenWeatherMap API** – for live weather data
+- **HTML5** – for structure  
+- **CSS3** – for styling and responsiveness  
+- **JavaScript (Vanilla)** – for functionality and API integration  
+- **OpenWeatherMap API** – for live weather data  
 
 ---
 
@@ -37,7 +37,7 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/SAURAV6393/weather-app.git
 cd weather-app
-```
+````
 
 1. Open `index.html` in your browser.
 2. Enter a city name to get real-time weather information.
@@ -58,23 +58,28 @@ const apiKey = "YOUR_API_KEY_HERE";
 
 ## 📁 Folder Structure
 
+```
 weather-app/
 │
 ├── index.html
 ├── style.css
 ├── script.js
-├── weather_app_Screeenshot.png <-- ✅ Screenshot added here
+├── weather_app_Screenshot.png <-- ✅ Screenshot added here
 └── images/
-├── clear.png
-├── clouds.png
-├── rain.png
-├── humidity.png
-├── wind.png
-└── search.png
+    ├── clear.png
+    ├── clouds.png
+    ├── rain.png
+    ├── humidity.png
+    ├── wind.png
+    └── search.png
+```
+
+---
 
 ## 🌐 Live Demo
 
-> 🔗 [Click here to view the live app](https://github.com/SAURAV6393/Weather-App.git) > _(Replace the above link with your GitHub Pages link)_
+> 🔗 [Click here to view the live app](https://SAURAV6393.github.io/weather-app)
+> *(Replace the above link with your GitHub Pages URL)*
 
 ---
 
@@ -84,10 +89,12 @@ Here’s how the app looks in action:
 
 ![Weather App Screenshot](weather_app_Screenshot.png)
 
+---
+
 ## 🙌 Acknowledgements
 
-- [OpenWeatherMap API](https://openweathermap.org/)
-- [Shields.io](https://shields.io/) for badges
+* [OpenWeatherMap API](https://openweathermap.org/)
+* [Shields.io](https://shields.io/) for badges
 
 ---
 
@@ -100,6 +107,3 @@ or raise an issue in this repository.
 
 ⭐ **Star this repo** if you like it!
 
-```
-
-```
