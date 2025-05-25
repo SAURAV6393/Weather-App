@@ -35,7 +35,7 @@
 Follow these steps to run the project locally:
 
 ```bash
-git clone https://github.com/yourusername/weather-app.git
+git clone https://github.com/SAURAV6393/weather-app.git
 cd weather-app
 ```
 
@@ -58,26 +58,23 @@ const apiKey = "YOUR_API_KEY_HERE";
 
 ## 📁 Folder Structure
 
-```
 weather-app/
 │
 ├── index.html
 ├── style.css
 ├── script.js
+├── weather_app_Screeenshot.png <-- ✅ Screenshot added here
 └── images/
-    ├── clear.png
-    ├── clouds.png
-    ├── rain.png
-    ├── humidity.png
-    ├── wind.png
-    └── search.png
-```
-
----
+├── clear.png
+├── clouds.png
+├── rain.png
+├── humidity.png
+├── wind.png
+└── search.png
 
 ## 🌐 Live Demo
 
-> 🔗 [Click here to view the live app](https://your-username.github.io/weather-app/) > _(Replace the above link with your GitHub Pages link)_
+> 🔗 [Click here to view the live app](https://github.com/SAURAV6393/Weather-App.git) > _(Replace the above link with your GitHub Pages link)_
 
 ---
 
@@ -85,7 +82,7 @@ weather-app/
 
 Here’s how the app looks in action:
 
-![Weather App Screenshot](weather_screenshot.png)
+![Weather App Screenshot](weather_app_Screenshot.png)
 
 ## 🙌 Acknowledgements
 
